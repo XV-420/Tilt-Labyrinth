@@ -19,13 +19,12 @@ public class TiltControls : MonoBehaviour
     void Update()
     {
         //get input
-        transform.localRotation= GyroManager.Instance.GetGyroRotation(); //* startRotation;
+        Quaternion temp = GyroManager.Instance.GetGyroRotation(); //* startRotation;
         
-        //transform.localRotation = new Quaternion(temp.x, 0.0f,
-         //-temp.y, temp.w);
+        transform.localRotation = new Quaternion(temp.x, 0.0f,
+         -temp.y, temp.w);
         
         //LimitRot();
-
     }
 
     
@@ -37,11 +36,11 @@ public class TiltControls : MonoBehaviour
         eulerAngles.x = (eulerAngles.x > 180) ? eulerAngles.x - 360 : eulerAngles.y;
         eulerAngles.x = Mathf.Clamp(eulerAngles.x, minXRotation, maxXRotation);
 
-        //eulerAngles.z = (eulerAngles.y > 180) ? eulerAngles.y - 180 : eulerAngles.y;
-        //eulerAngles.z = Mathf.Clamp(eulerAngles.y, minZRotation, maxZRotation);
+        eulerAngles.z = (eulerAngles.y > 180) ? eulerAngles.y - 180 : eulerAngles.y;
+        eulerAngles.z = Mathf.Clamp(eulerAngles.y, minZRotation, maxZRotation);
         
         Quaternion change = Quaternion.Euler(eulerAngles);
         
-        transform.localRotation = new Quaternion(change.x, 0.0f, -transform.localRotation.y, transform.localRotation.w);
+        transform.localRotation = new Quaternion(change.x, 0.0f, -change.z, transform.localRotation.w);
     }
 }
