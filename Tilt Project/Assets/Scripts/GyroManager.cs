@@ -30,12 +30,7 @@ public class GyroManager : MonoBehaviour
     private Gyroscope gyro;
     private Quaternion rotation;
     private bool gyroEnabled;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Quaternion referenceRotation;
 
     // Update is called once per frame
     void Update()
@@ -53,6 +48,7 @@ public class GyroManager : MonoBehaviour
             gyro = Input.gyro;
             gyro.enabled = true;
             gyroEnabled = true;
+            referenceRotation = Quaternion.Inverse(Input.gyro.attitude);
         }
         else gyroEnabled = false;
     }
@@ -61,5 +57,15 @@ public class GyroManager : MonoBehaviour
     public Quaternion GetGyroRotation()
     {
         return rotation;
+    }
+    
+    public Quaternion GetGyroReferenceRotation()
+    {
+        return referenceRotation;
+    }
+    
+    public void SetGyroReferenceRotation()
+    {
+        referenceRotation = Quaternion.Inverse(rotation);
     }
 }
