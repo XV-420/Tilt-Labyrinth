@@ -29,6 +29,7 @@ public class TiltControls : MonoBehaviour
         // rotate about the x axis to make the y axis point the right direction
         localRotation = Quaternion.AngleAxis(90, Vector3.right ) * localRotation;
 
+        localRotation = new Quaternion(-localRotation.x, 0.0f, localRotation.z, localRotation.w);
       
         //debugging
         Vector3 up = localRotation * Vector3.up;
