@@ -8,6 +8,7 @@ public class TiltControls : MonoBehaviour
     {
         //checks gyro support
         GyroManager.Instance.EnableGyro();
+        GyroManager.Instance.GetGyroReferenceRotation();
     }
     
     void Update()
