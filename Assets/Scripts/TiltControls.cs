@@ -5,10 +5,14 @@ public class TiltControls : MonoBehaviour
 {
     [SerializeField] float MaxValue = 315; //-45
     [SerializeField] float MinValue = 45;//45
+
+    private Rigidbody rigidbody;
     void Start()
     {
         //checks gyro support
         GyroManager.Instance.EnableGyro();
+        
+        rigidbody = GetComponent<Rigidbody>();
     }
     
     void Update()
@@ -17,9 +21,7 @@ public class TiltControls : MonoBehaviour
         Quaternion worldRotation = GyroManager.Instance.GetGyroRotation();
         
         // make the rotation relative to the local rotation rather than the world
-        Quaternion localRotation = GyroManager.Instance.GetGyroReferenceRotation() * worldRotation;
         
-        Vector3 euler = localRotation.eulerAngles;
 
 
         
@@ -27,14 +29,7 @@ public class TiltControls : MonoBehaviour
         
         zRotation = new Quaternion(zRotation.x, zRotation.y, zRotation.z, 0.0f);
         // reverse the rotation about the z-axis
-        localRotation = Quaternion.Inverse( zRotation ) * localRotation;
 
-        localRotation = new Quaternion(localRotation.x, localRotation.z, localRotation.y, -localRotation.w);
-
-        Vector3 localRotationEuler = localRotation.eulerAngles;
-        
-        //make y the same always
-        localRotationEuler.y = -localRotationEuler.normalized.y;
 
         
         //reverse z by the x so its rotation doesn't change when x is clamped FIX
@@ -42,57 +37,38 @@ public class TiltControls : MonoBehaviour
         {
             Quaternion xRotation = Quaternion.AngleAxis(localRotationEuler.x, Vector3.right);
             // reverse the rotation about the x-axis
-            localRotation = (Quaternion.Inverse(xRotation) * localRotation);
 
-            if (localRotationEuler.z - localRotation.eulerAngles.z > MinValue)
-            {
-               // if (localRotationEuler.z > 90)
-                   // localRotationEuler.z = 0.0f;
-                if (localRotationEuler.z < 270)
-                    localRotationEuler.z = 270.0f;
-            }
-        }
+        rigidbody.angularVelocity = Vector3.zero;
+        rigidbody.AddTorque(Vector3.Scale( EulerAnglesToDirection(localRotationEuler), Vector3.up), ForceMode.Impulse);
 
-        
-        
-        //clamp and rotate
-        localRotationEuler = new Vector3(ClampAngle(localRotationEuler.x), localRotationEuler.y, ClampAngle(localRotationEuler.z));
-        transform.localRotation = Quaternion.Euler(localRotationEuler);
-      
-       
+        Debug.DrawRay( transform.position, EulerAnglesToDirection(localRotationEuler) * 10000, Color.yellow );
         //debugging
-        Vector3 up = localRotation * Vector3.up;
-        Vector3 right = localRotation * Vector3.right;
-        Vector3 fwd = localRotation * Vector3.forward;
+        Vector3 up = worldRotation * Vector3.up;
+        Vector3 right = worldRotation * Vector3.right;
+        Vector3 fwd = worldRotation * Vector3.forward;
       
 
-        Debug.DrawRay( transform.position, up * 100, Color.green );
-        Debug.DrawRay( transform.position, right * 100, Color.red );
-        Debug.DrawRay( transform.position, fwd * 100, Color.blue );
+       // Debug.DrawRay( transform.position, up * 100, Color.green );
+       // Debug.DrawRay( transform.position, right * 100, Color.red );
+       // Debug.DrawRay( transform.position, fwd * 100, Color.blue );
 
     }
-    private float ClampAngle(float angle)
-    {
-        if (angle >MinValue && angle < MaxValue)
-        {       // if angle in the critic region...
-            if (angle < MaxValue && angle> 180)
-            {
-                angle = MaxValue;
-            }
-            else
-            {
-                angle = MinValue;
-            }
-        }
-        // if angle negative, convert to 0..360
-        return angle;
+   
+    // eulerAngles in radians
+    Vector3 EulerAnglesToDirection(Vector3 eulerAngles) {
+        float sinYaw = Mathf.Sin(eulerAngles.y);
+        float cosYaw = Mathf.Cos(eulerAngles.y);
+ 
+        float sinPitch = Mathf.Sin(eulerAngles.x);
+        float cosPitch = Mathf.Cos(eulerAngles.x);
+        cosPitch *= -1.0f;
+ 
+        Vector3 rotatedDirection = new Vector3(
+            sinYaw * cosPitch,
+            sinPitch,
+            cosYaw * cosPitch
+        );
+ 
     }
-    private float ConvertToPositiveAngle(float angle)
-    {
-        while(angle < 0) { 
-            angle += 360.0f;
-        }
 
-        return angle;
-    }
 }
