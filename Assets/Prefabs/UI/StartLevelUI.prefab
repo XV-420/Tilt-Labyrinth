@@ -252,6 +252,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calibrateButton: {fileID: 6281478829952518223}
   levelUI: {fileID: 1342304262624058395}
+  calibrate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TiltControls, Assembly-CSharp
+        m_MethodName: CalibrateAccelerometer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7871242716825629467
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +389,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GyroManager, Assembly-CSharp
-        m_MethodName: SetGyroReferenceRotation
+        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
+        m_MethodName: ResetBall
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -395,13 +410,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
         type: 3}
+      propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
+        type: 3}
       propertyPath: ballSpawnEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
+        type: 3}
+      propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
         type: 3}
       propertyPath: ballSpawnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
+        type: 3}
+      propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
+        type: 3}
+      propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CalibrateAccelerometer
       objectReference: {fileID: 0}
     - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
         type: 3}
@@ -415,8 +450,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
         type: 3}
+      propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TiltControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
+        type: 3}
       propertyPath: ballSpawnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Ball, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
+        type: 3}
+      propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
         type: 3}

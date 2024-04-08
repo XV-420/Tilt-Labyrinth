@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.5385, y: 3.5385, z: 3.5385}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1570710534993853879}
@@ -100,10 +100,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5024891539792001847, guid: 7bcfede3f1167d44eb6990437143bd7e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1906470818800664572, guid: 7bcfede3f1167d44eb6990437143bd7e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 856005618033318264}
   m_SourcePrefab: {fileID: 100100000, guid: 7bcfede3f1167d44eb6990437143bd7e, type: 3}
 --- !u!4 &1570710534993853879 stripped
 Transform:
@@ -111,3 +116,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7916414165352256347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8622675464146906279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1906470818800664572, guid: 7bcfede3f1167d44eb6990437143bd7e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7916414165352256347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &856005618033318264
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622675464146906279}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
