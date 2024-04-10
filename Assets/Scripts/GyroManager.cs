@@ -31,12 +31,22 @@ public class GyroManager : MonoBehaviour
     private Quaternion rotation;
     private bool gyroEnabled;
     private Quaternion referenceRotation;
+    private Vector3 simulatedRotation;
 
     // Update is called once per frame
     void Update()
     {
         //sets rotation based on gyro
         if (gyroEnabled) rotation = gyro.attitude;
+        float rotationSpeed = 100f;
+        
+       
+
+        // Apply sensitivity
+        simulatedRotation *= 1;
+
+        // Apply simulated rotation to the GameObject
+        transform.rotation = Quaternion.Euler(simulatedRotation);
     }
 
     //starts the gyro if supported by the device, returns if already active
@@ -51,6 +61,7 @@ public class GyroManager : MonoBehaviour
             referenceRotation = Quaternion.Inverse(Input.gyro.attitude);
         }
         else gyroEnabled = false;
+        
     }
 
     //returns the rotation
