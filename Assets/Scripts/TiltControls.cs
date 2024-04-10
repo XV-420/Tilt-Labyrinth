@@ -17,8 +17,8 @@ public class TiltControls : MonoBehaviour
         fixedTilt.z = fixedTilt.y;
         fixedTilt.y = 0.0f;
 
+        //rigidbody.AddForce(fixedTilt * 200.0f * Time.deltaTime);
         rigidbody.AddForce(fixedTilt * 200.0f * Time.deltaTime);
-
     }
     
     private Quaternion tiltReference;
