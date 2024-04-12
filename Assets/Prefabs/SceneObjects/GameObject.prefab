@@ -45,6 +45,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board
       objectReference: {fileID: 0}
+    - target: {fileID: 1906470818800664572, guid: 7bcfede3f1167d44eb6990437143bd7e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6253192746861238870, guid: 7bcfede3f1167d44eb6990437143bd7e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c634d43759f96547a2894e2744199f1, type: 2}
     - target: {fileID: 8651564784307973868, guid: 7bcfede3f1167d44eb6990437143bd7e,
         type: 3}
       propertyPath: m_LocalScale.x

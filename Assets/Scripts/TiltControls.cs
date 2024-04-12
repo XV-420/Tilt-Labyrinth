@@ -24,6 +24,9 @@ public class TiltControls : MonoBehaviour
         fixedTilt.y = 0.0f;
 
         //rigidbody.AddForce(fixedTilt * 200.0f * Time.deltaTime);
+        //debugging rays
+        Debug.DrawRay(transform.position, fixedTilt * speed * Time.deltaTime, Color.green);
+        Debug.DrawRay(transform.position, ballRigidBody.velocity, Color.red);
         ballRigidBody.AddForce(fixedTilt * speed * Time.deltaTime);
     }
     
