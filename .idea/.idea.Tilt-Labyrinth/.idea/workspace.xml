@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/GameObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/GameObject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GameUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GameUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BoardTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BoardTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,8 @@
       <workItem from="1711990284450" duration="15117000" />
       <workItem from="1712337390109" duration="6594000" />
       <workItem from="1712593392883" duration="1994000" />
-      <workItem from="1712930025158" duration="781000" />
+      <workItem from="1712930025158" duration="1254000" />
+      <workItem from="1712943166371" duration="2943000" />
     </task>
     <servers />
   </component>
