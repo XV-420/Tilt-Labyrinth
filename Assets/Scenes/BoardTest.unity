@@ -279,11 +279,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2066749804766040202, guid: b683a7a0a39b5de4783b7cea11161b8e,
         type: 3}
-      propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1402013583}
-    - target: {fileID: 2066749804766040202, guid: b683a7a0a39b5de4783b7cea11161b8e,
-        type: 3}
       propertyPath: ballSpawnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1402013581}
@@ -391,6 +386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074671010676973658, guid: b683a7a0a39b5de4783b7cea11161b8e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -301
       objectReference: {fileID: 0}
     - target: {fileID: 6281478829952518223, guid: b683a7a0a39b5de4783b7cea11161b8e,
         type: 3}
