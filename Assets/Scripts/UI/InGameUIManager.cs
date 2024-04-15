@@ -13,11 +13,13 @@ public class InGameUIManager : MonoBehaviour
     
     [SerializeField] private UnityEvent ballSpawnEvent;
     
+    [SerializeField] private UnityEvent calibrate;
+    
     void Start()
     {
         //setup onclick of the calibrate 
         calibrateButton.onClick.AddListener(delegate {   
-            GyroManager.Instance.SetGyroReferenceRotation();
+           calibrate.Invoke();
         });
         
         //set up the ball spawn event
