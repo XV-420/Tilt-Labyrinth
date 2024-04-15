@@ -22,21 +22,21 @@ public class Ball : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W)) { 
-            simulatedRotation.x += Input.GetAxis("Vertical") * 100 * Time.deltaTime;
+            simulatedRotation.x +=  100 * Time.deltaTime;
          }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            simulatedRotation.x -= Input.GetAxis("Vertical") * 100 * Time.deltaTime;
+            simulatedRotation.x -= 100 * Time.deltaTime;
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            simulatedRotation.y -= Input.GetAxis("Horizontal") * 100 * Time.deltaTime;
+            simulatedRotation.z -= 100 * Time.deltaTime;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            simulatedRotation.y += Input.GetAxis("Horizontal") *100* Time.deltaTime;
+            simulatedRotation.z += 100* Time.deltaTime;
         }
-
+        
         gyro = Input.gyro;
        
 
@@ -44,7 +44,10 @@ public class Ball : MonoBehaviour
 
         Vector3 acceleration = simulatedRotation;
         Vector3 gyroDir = -transform.up;
-
+        float x = -acceleration.x * 0.9f;
+        float z = -acceleration.z * 0.9f;
+        acceleration.x += x;
+        acceleration.z += z;
         Debug.Log("Accel: " + acceleration + " Gyro: " + gyroDir);
 
         transform.position += (acceleration - gyroDir) * Time.deltaTime;
