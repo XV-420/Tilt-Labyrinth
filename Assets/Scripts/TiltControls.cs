@@ -2,6 +2,7 @@ using System;
 using System.IO.Compression;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class TiltControls : MonoBehaviour
 {
 
