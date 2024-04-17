@@ -59,5 +59,4 @@ public class ExitLevel : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    
 }
