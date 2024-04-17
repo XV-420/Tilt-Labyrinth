@@ -250,23 +250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73cda09aac5c5b4fb41b1df33555840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
   calibrateButton: {fileID: 6281478829952518223}
   levelUI: {fileID: 1342304262624058395}
-  calibrate:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TiltControls, Assembly-CSharp
-        m_MethodName: CalibrateAccelerometer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &7871242716825629467
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +414,12 @@ PrefabInstance:
       propertyPath: m_VertexColorAlwaysGammaSpace
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
+        type: 3}
+      propertyPath: uiEventChannelSo
+      value: 
+      objectReference: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e,
+        type: 2}
     - target: {fileID: 3182305785349876547, guid: b7024dfd4bc14e9468d8afd86241bd99,
         type: 3}
       propertyPath: calibrate.m_PersistentCalls.m_Calls.Array.size

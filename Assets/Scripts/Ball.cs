@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField] private UIEventChannelSO uiEventChannel;
     [Header("Position for where the ball is reset to when reset is called")]
     [SerializeField] private Transform spawnPos;
 
@@ -47,4 +48,17 @@ public class Ball : MonoBehaviour
         if (other.gameObject.transform.position.y > transform.position.y)
             ResetBall();
     }
+    
+    
+
+    private void OnEnable()
+    {
+        uiEventChannel.OnReset += ResetBall;
+    }
+    private void OnDisable()
+    {
+        uiEventChannel.OnReset -= ResetBall;
+    }
+
+    
 }

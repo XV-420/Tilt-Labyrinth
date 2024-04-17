@@ -5,11 +5,42 @@ using UnityEngine.Events;
 public class UIEventChannelSO : ScriptableObject
 {
  
-    //what happens when the main menu is loaded
+    //event for when the level is completed
     public UnityAction OnLevelCompleted;
 
     public void RaiseOnLevelCompleted()
     {
         OnLevelCompleted.Invoke();
+    }
+    
+    //what happens when next level is clicked
+    public UnityAction OnNextLevel;
+    public void RaiseOnNextLevel()
+    {
+        OnNextLevel.Invoke();
+    }
+    
+    //what happens when main menu is clicked
+    public UnityAction OnMainMenu;
+
+    public void RaiseOnMainMenu()
+    {
+        OnMainMenu.Invoke();
+    }
+    
+    //trigger for when the calibrate is called
+    public UnityAction OnCalibrate;
+
+    public void RaiseOnCalibrate()
+    {
+        OnCalibrate.Invoke();
+    }
+    
+    //Trigger for when reset is called
+    public UnityAction OnReset;
+
+    public void RaiseOnReset()
+    {
+        OnReset.Invoke();
     }
 }

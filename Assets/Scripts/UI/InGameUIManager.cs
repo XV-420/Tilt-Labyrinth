@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class InGameUIManager : MonoBehaviour
 {
+    [SerializeField] private UIEventChannelSO uiEventChannelSo;
+    
     [Header("Unity UI Buttons")]
     //options button
     [SerializeField] private UnityEngine.UI.Button optionsButton;
@@ -25,27 +27,19 @@ public class InGameUIManager : MonoBehaviour
     //panel for options background
     [SerializeField] private GameObject backgroundOptionsPanel;
     
-    
-    [Header("Unity Events(onclick)")]
-    [SerializeField] private UnityEvent ballSpawnEvent;
-    
-    [SerializeField] private UnityEvent calibrateEvent;
-    
-    [SerializeField] private UnityEvent mainMenuEvent;
-
     void Start()
     {
         //setup onclick of the calibrate unpauses
         calibrateButton.onClick.AddListener(delegate {   
-            calibrateEvent.Invoke();
+            uiEventChannelSo.RaiseOnCalibrate();
             DisableUI();
             Time.timeScale = 1;
         });
         
         //set up the ball spawn event unpauses
         spawnBallButton.onClick.AddListener(delegate {   
-            ballSpawnEvent.Invoke();
-            calibrateEvent.Invoke();
+            uiEventChannelSo.RaiseOnReset();
+            uiEventChannelSo.RaiseOnCalibrate();
             DisableUI();
             Time.timeScale = 1;
         });
@@ -59,7 +53,7 @@ public class InGameUIManager : MonoBehaviour
         
         mainMenuButton.onClick.AddListener(delegate
         {
-            mainMenuEvent.Invoke();
+            uiEventChannelSo.RaiseOnMainMenu();
         });
         
         //hide panel and other ui buttons

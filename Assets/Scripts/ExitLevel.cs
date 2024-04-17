@@ -12,10 +12,12 @@ public class ExitLevel : MonoBehaviour
     private void OnEnable()
     {
         uiEventChannel.OnLevelCompleted += LoadNextLevel;
+        uiEventChannel.OnMainMenu += LoadMainMenu;
     }
     private void OnDisable()
     {
         uiEventChannel.OnLevelCompleted -= LoadNextLevel;
+        uiEventChannel.OnMainMenu -= LoadMainMenu;
     }
     
 
