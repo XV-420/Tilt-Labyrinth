@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Ball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/StartLevelUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/StartLevelUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/UIEventChannelSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/UIEventChannelSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameUIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StartLevelUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StartLevelUIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +96,7 @@
       <workItem from="1713201615684" duration="1864000" />
       <workItem from="1713210732359" duration="4046000" />
       <workItem from="1713292942211" duration="2266000" />
-      <workItem from="1713373024980" duration="2971000" />
+      <workItem from="1713373024980" duration="3457000" />
     </task>
     <servers />
   </component>
