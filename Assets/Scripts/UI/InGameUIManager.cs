@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class InGameUIManager : MonoBehaviour
 {
@@ -18,8 +19,11 @@ public class InGameUIManager : MonoBehaviour
     //main menu button
     [SerializeField] private UnityEngine.UI.Button mainMenuButton;
     
-    //main menu button
+    //resume button
     [SerializeField] private UnityEngine.UI.Button resumeButton;
+
+    //start game button
+    [SerializeField] private UnityEngine.UI.Button startGameButton;
 
     [Header("Unity UI Elements")]
     //panel for options background
@@ -54,7 +58,16 @@ public class InGameUIManager : MonoBehaviour
             DisableUI();
             Time.timeScale = 1;
         });
-        
+
+        //set up start game button
+        startGameButton.onClick.AddListener(delegate
+        {
+            //TODO: should be changed to be the player's current level, not specifically level 1
+            SceneManager.LoadScene(1);
+            DisableUI();
+            Time.timeScale = 1;
+        });
+
         //hide panel and other ui buttons
         DisableUI();
         
