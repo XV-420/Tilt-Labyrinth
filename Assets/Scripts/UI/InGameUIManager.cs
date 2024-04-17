@@ -30,6 +30,8 @@ public class InGameUIManager : MonoBehaviour
     [SerializeField] private UnityEvent ballSpawnEvent;
     
     [SerializeField] private UnityEvent calibrateEvent;
+    
+    [SerializeField] private UnityEvent mainMenuEvent;
 
     void Start()
     {
@@ -53,6 +55,11 @@ public class InGameUIManager : MonoBehaviour
         {
             DisableUI();
             Time.timeScale = 1;
+        });
+        
+        mainMenuButton.onClick.AddListener(delegate
+        {
+            mainMenuEvent.Invoke();
         });
         
         //hide panel and other ui buttons
