@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class TiltControls : MonoBehaviour
 {
+    [SerializeField] private UIEventChannelSO uiEventChannel;
 
     private Rigidbody ballRigidBody;
 
@@ -91,6 +92,18 @@ public class TiltControls : MonoBehaviour
     {
         ballRigidBody.velocity = Vector3.zero;
     }
+    
+    
+
+    private void OnEnable()
+    {
+        uiEventChannel.OnCalibrate += CalibrateAccelerometer;
+    }
+    private void OnDisable()
+    {
+        uiEventChannel.OnCalibrate -= CalibrateAccelerometer;
+    }
+
     
     
 }

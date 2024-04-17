@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8795102597531538226}
   - component: {fileID: 3033624688467108005}
   - component: {fileID: 6687972147417815877}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ace67d11a286145aacc1451373c0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiEventChannel: {fileID: 0}
   spawnPos: {fileID: 0}
   lowBounds: {fileID: 0}
 --- !u!114 &6687972147417815877
@@ -161,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d798450c373a9542b60dc9074368bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
   speed: 300
   jumpSpeed: 15
   jumpEnable: 1

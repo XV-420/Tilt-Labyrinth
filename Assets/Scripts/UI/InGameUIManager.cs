@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class InGameUIManager : MonoBehaviour
 {
+    [SerializeField] private UIEventChannelSO uiEventChannelSo;
+    
     [Header("Unity UI Buttons")]
     //options button
     [SerializeField] private UnityEngine.UI.Button optionsButton;
@@ -19,35 +20,26 @@ public class InGameUIManager : MonoBehaviour
     //main menu button
     [SerializeField] private UnityEngine.UI.Button mainMenuButton;
     
-    //resume button
+    //main menu button
     [SerializeField] private UnityEngine.UI.Button resumeButton;
-
-    //start game button
-    [SerializeField] private UnityEngine.UI.Button startGameButton;
 
     [Header("Unity UI Elements")]
     //panel for options background
     [SerializeField] private GameObject backgroundOptionsPanel;
     
-    
-    [Header("Unity Events(onclick)")]
-    [SerializeField] private UnityEvent ballSpawnEvent;
-    
-    [SerializeField] private UnityEvent calibrateEvent;
-
     void Start()
     {
         //setup onclick of the calibrate unpauses
         calibrateButton.onClick.AddListener(delegate {   
-            calibrateEvent.Invoke();
+            uiEventChannelSo.RaiseOnCalibrate();
             DisableUI();
             Time.timeScale = 1;
         });
         
         //set up the ball spawn event unpauses
         spawnBallButton.onClick.AddListener(delegate {   
-            ballSpawnEvent.Invoke();
-            calibrateEvent.Invoke();
+            uiEventChannelSo.RaiseOnReset();
+            uiEventChannelSo.RaiseOnCalibrate();
             DisableUI();
             Time.timeScale = 1;
         });
@@ -58,16 +50,12 @@ public class InGameUIManager : MonoBehaviour
             DisableUI();
             Time.timeScale = 1;
         });
-
-        //set up start game button
-        startGameButton.onClick.AddListener(delegate
+        
+        mainMenuButton.onClick.AddListener(delegate
         {
-            //TODO: should be changed to be the player's current level, not specifically level 1
-            SceneManager.LoadScene(1);
-            DisableUI();
-            Time.timeScale = 1;
+            uiEventChannelSo.RaiseOnMainMenu();
         });
-
+        
         //hide panel and other ui buttons
         DisableUI();
         

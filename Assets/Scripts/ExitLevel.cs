@@ -1,38 +1,63 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(BoxCollider))]
 public class ExitLevel : MonoBehaviour
 {
-    
-    // box collider
-    private BoxCollider exitCollider;
+    //event channel
+    [Header("Event Channels")]
+    [SerializeField] private UIEventChannelSO uiEventChannel;
 
-    public int sceneCount;
+    private int sceneCount; //count of the scenes in the game
+    
+    //subscribe(listen) to on level completed and main menu events
+    private void OnEnable()
+    {
+        uiEventChannel.OnNextLevel += LoadNextLevel;
+        uiEventChannel.OnMainMenu += LoadMainMenu;
+    }
+    private void OnDisable()
+    {
+        uiEventChannel.OnNextLevel -= LoadNextLevel;
+        uiEventChannel.OnMainMenu -= LoadMainMenu;
+    }
     
 
-    // Start is called before the first frame update
+    // get built scenes
     void Start()
     {
-        exitCollider = GetComponent<BoxCollider>();
         sceneCount = SceneManager.sceneCountInBuildSettings;
     }
 
-    private void OnTriggerEnter(Collider other)
+    
+    
+    //loads the next level, defaults to main menu if fails
+    private void LoadNextLevel()
     {
-        //check if ball
-        if (other.CompareTag("Ball"))
-        {
-            //load the next scene if it exists, otherwise go the the main menu
-            //main menu is 0! 
-            int sceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
-            //if scene is valid load
-            
-            if (sceneToLoad <= sceneCount)
-                SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
-            else //load the main menu, 0
-                SceneManager.LoadScene(0);
-        }
+        //load the next scene if it exists, otherwise go the the main menu
+        //main menu is 0! 
+        int sceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        //if scene is valid load
+        
+        if (sceneToLoad <= sceneCount)
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
+        else //load the main menu, 0
+            SceneManager.LoadScene(0);
     }
+    
+    //loads a level at the index
+    private void LoadSpecificLevel(int sceneToLoad)
+    {
+        //if scene is valid load
+        if (sceneToLoad <= sceneCount)
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
+        else //load the main menu, 0
+            SceneManager.LoadScene(0);
+    }
+    
+    //loads the level 0 (main menu)
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    
 }

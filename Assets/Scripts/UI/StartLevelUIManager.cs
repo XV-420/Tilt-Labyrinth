@@ -6,15 +6,16 @@ using UnityEngine.UI;
 
 public class StartLevelUIManager : MonoBehaviour
 {
+    //scriptable object
+    [SerializeField] private UIEventChannelSO uiEventChannel;
+    
     //calibrate button
     [SerializeField] private UnityEngine.UI.Button calibrateButton;
 
     //canvas for the levelUI
     [SerializeField] private UnityEngine.Canvas levelUI;
     
-    //canvas for the levelUI
-    [SerializeField] private UnityEvent calibrate;
-
+    
     void Start()
     {
         //disable level UI
@@ -23,7 +24,7 @@ public class StartLevelUIManager : MonoBehaviour
 
         //setup onclick (calibrate and enable game ui) pauses game until clicked
         calibrateButton.onClick.AddListener(delegate {   
-           calibrate.Invoke();
+           uiEventChannel.RaiseOnCalibrate();
            levelUI.enabled = true;
            calibrateButton.gameObject.SetActive(false);
            Time.timeScale = 1;
