@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6687972147417815877}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,3 +164,7 @@ MonoBehaviour:
   speed: 300
   jumpSpeed: 15
   jumpEnable: 1
+  inputCancelOrVelocityCancel: 0
+  heightOfInputCancelation: 3
+  maxJumpSpeed: 5
+  lowBoundsForJump: {fileID: 0}
