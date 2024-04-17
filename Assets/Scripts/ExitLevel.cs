@@ -4,19 +4,20 @@ using UnityEngine.SceneManagement;
 public class ExitLevel : MonoBehaviour
 {
     //event channel
+    [Header("Event Channels")]
     [SerializeField] private UIEventChannelSO uiEventChannel;
+
+    private int sceneCount; //count of the scenes in the game
     
-    private int sceneCount;
-    
-    //subscribe to on level completed
+    //subscribe(listen) to on level completed and main menu events
     private void OnEnable()
     {
-        uiEventChannel.OnLevelCompleted += LoadNextLevel;
+        uiEventChannel.OnNextLevel += LoadNextLevel;
         uiEventChannel.OnMainMenu += LoadMainMenu;
     }
     private void OnDisable()
     {
-        uiEventChannel.OnLevelCompleted -= LoadNextLevel;
+        uiEventChannel.OnNextLevel -= LoadNextLevel;
         uiEventChannel.OnMainMenu -= LoadMainMenu;
     }
     
@@ -30,7 +31,7 @@ public class ExitLevel : MonoBehaviour
     
     
     //loads the next level, defaults to main menu if fails
-    public void LoadNextLevel()
+    private void LoadNextLevel()
     {
         //load the next scene if it exists, otherwise go the the main menu
         //main menu is 0! 
@@ -44,7 +45,7 @@ public class ExitLevel : MonoBehaviour
     }
     
     //loads a level at the index
-    public void LoadSpecificLevel(int sceneToLoad)
+    private void LoadSpecificLevel(int sceneToLoad)
     {
         //if scene is valid load
         if (sceneToLoad <= sceneCount)
@@ -54,7 +55,7 @@ public class ExitLevel : MonoBehaviour
     }
     
     //loads the level 0 (main menu)
-    public void LoadMainMenu()
+    private void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
     }

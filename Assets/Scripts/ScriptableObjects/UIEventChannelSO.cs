@@ -4,15 +4,6 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "UIEventChannel", menuName = "ScriptableObjects/UIEventChannelSO")]
 public class UIEventChannelSO : ScriptableObject
 {
- 
-    //event for when the level is completed
-    public UnityAction OnLevelCompleted;
-
-    public void RaiseOnLevelCompleted()
-    {
-        OnLevelCompleted.Invoke();
-    }
-    
     //what happens when next level is clicked
     public UnityAction OnNextLevel;
     public void RaiseOnNextLevel()
@@ -20,7 +11,7 @@ public class UIEventChannelSO : ScriptableObject
         OnNextLevel.Invoke();
     }
     
-    //what happens when main menu is clicked
+    //trigger when main menu is clicked
     public UnityAction OnMainMenu;
 
     public void RaiseOnMainMenu()

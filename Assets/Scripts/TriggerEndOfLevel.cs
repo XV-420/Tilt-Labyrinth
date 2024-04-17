@@ -7,13 +7,13 @@ using UnityEngine;
 public class TriggerEndOfLevel : MonoBehaviour
 {
     //event channel
-    [SerializeField] private UIEventChannelSO uiEventChannel;
+    [SerializeField] private GameEventChannelSO gameEventChannel;
     
     
     //trigger event when hit by the ball
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
-            uiEventChannel.RaiseOnLevelCompleted();
+            gameEventChannel.RaiseOnLevelCompleted();
     }
 }
