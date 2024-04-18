@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Rotate : MonoBehaviour
@@ -18,19 +19,46 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > 3) {
+        if(timer > 10) {
         x=Random.Range(-1.0f, 1.0f);
         y = Random.Range(-1.0f, 1.0f);
         z = Random.Range(-1.0f, 1.0f);
             timer = 0;
         }
-        if (transform.eulerAngles.x+x < 340 && transform.eulerAngles.x+x >= 30)
+        if (transform.eulerAngles.x+x < 340 && transform.eulerAngles.x+x > 30)
         {
-            x = 0;
+            if(transform.eulerAngles.x + x < 340)
+            {
+                if (x < 0)
+                {
+                    x = 0;
+                }
+            }
+            else
+            {
+                if (x > 0)
+                {
+                    x = 0;
+                }
+            }
         }
-        if (transform.eulerAngles.z + z < 340 && transform.eulerAngles.z + z >= 30)
+        if (transform.eulerAngles.z + z < 340 && transform.eulerAngles.z + z > 30)
         {
-            z = 0;
+
+            if (transform.eulerAngles.z + z < 180)
+            {
+                if (z>  0)
+                {
+                    z = 0;
+                }
+            }
+            else
+            {
+                if (z > 0)
+                {
+                    z = 0;
+                }
+            }
         }
         transform.Rotate(x*Time.deltaTime*50, 0, z * Time.deltaTime*50);
     }
