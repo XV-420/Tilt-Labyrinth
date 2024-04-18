@@ -19,11 +19,13 @@ public class BallCompControls : MonoBehaviour
         {
             Vector3 z = new Vector3(0, 0, 1);
             ballRigidBody.AddForce(z * speed * Time.deltaTime);
+            Debug.Log(z * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             Vector3 z = new Vector3(0, 0, -1);
             ballRigidBody.AddForce(z * speed * Time.deltaTime);
+            Debug.Log(z*speed*Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
             Vector3 x = new Vector3(-1, 0, 0);
