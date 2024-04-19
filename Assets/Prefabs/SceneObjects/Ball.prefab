@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
-  speed: 300
-  jumpSpeed: 15
+  speed: 400
+  jumpSpeed: 30
   jumpEnable: 1
   inputCancelOrVelocityCancel: 0
   heightOfInputCancelation: 3

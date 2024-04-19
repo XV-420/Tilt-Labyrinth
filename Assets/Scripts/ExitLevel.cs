@@ -7,7 +7,7 @@ public class ExitLevel : MonoBehaviour
     [Header("Event Channels")]
     [SerializeField] private UIEventChannelSO uiEventChannel;
 
-    public int sceneCount; //count of the scenes in the game
+    private int sceneCount; //count of the scenes in the game
     
     //subscribe(listen) to on level completed and main menu events
     private void OnEnable()
