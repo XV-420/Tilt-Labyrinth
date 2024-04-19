@@ -11,10 +11,13 @@ public class ExitArrows : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Transform t in exitPositions)
+        if (ballTransform)
         {
-            //debugging rays
-            Debug.DrawRay(ballTransform.position,   t.position-ballTransform.position, Color.yellow);
+            foreach (Transform t in exitPositions)
+            {
+                //debugging rays
+                Debug.DrawRay(ballTransform.position, t.position - ballTransform.position, Color.yellow);
+            }
         }
     }
 }
