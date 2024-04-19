@@ -34,4 +34,12 @@ public class UIEventChannelSO : ScriptableObject
     {
         OnReset.Invoke();
     }
+    
+    //Trigger for when reset is called
+    public UnityAction OnQuit;
+
+    public void RaiseOnQuit()
+    {
+        OnQuit.Invoke();
+    }
 }
