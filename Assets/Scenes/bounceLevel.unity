@@ -199,9 +199,24 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6687972147417815877, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}
+      propertyPath: jumpSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687972147417815877, guid: 5448a1a19b725794d96df965b3b6c38c,
+        type: 3}
+      propertyPath: maxJumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687972147417815877, guid: 5448a1a19b725794d96df965b3b6c38c,
+        type: 3}
       propertyPath: lowBoundsForJump
       value: 
       objectReference: {fileID: 2091948681}
+    - target: {fileID: 6687972147417815877, guid: 5448a1a19b725794d96df965b3b6c38c,
+        type: 3}
+      propertyPath: m_LayerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 6948391716579231024, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}
       propertyPath: maxJumpSpeed

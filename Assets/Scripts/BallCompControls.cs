@@ -14,7 +14,6 @@ public class BallCompControls : MonoBehaviour
     void Start()
     {
         ballRigidBody = GetComponent<Rigidbody>();
-     
     }
 
     // Update is called once per frame
@@ -26,8 +25,7 @@ public class BallCompControls : MonoBehaviour
         int i = 0;
         if (hitColliders.Length>0)
         {
-            
-                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
                 {
                     Vector3 z = new Vector3(0, 0, 1);
                     ballRigidBody.AddForce(z * speed * Time.deltaTime);
@@ -41,15 +39,11 @@ public class BallCompControls : MonoBehaviour
                 {
                     Vector3 x = new Vector3(-1, 0, 0);
                     ballRigidBody.AddForce(x * speed * Time.deltaTime);
-
-
                 }
                 if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
                 {
                     Vector3 x = new Vector3(1, 0, 0);
                     ballRigidBody.AddForce(x * speed * Time.deltaTime);
-
-
                 }
 
                 //jumping
@@ -64,9 +58,7 @@ public class BallCompControls : MonoBehaviour
                     Vector3 y = new Vector3(0, 1, 0);
                    
                     ballRigidBody.AddForce(y * maxJumpSpeed*Time.deltaTime);
-                    
-
-            }
+                }
            
         }
         
