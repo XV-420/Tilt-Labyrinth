@@ -205,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 6687972147417815877, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}
       propertyPath: maxJumpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6687972147417815877, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}
@@ -220,7 +220,7 @@ PrefabInstance:
     - target: {fileID: 6948391716579231024, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}
       propertyPath: maxJumpSpeed
-      value: 900
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7865005378517448157, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}

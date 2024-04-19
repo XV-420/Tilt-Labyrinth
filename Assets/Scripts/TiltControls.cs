@@ -40,7 +40,7 @@ public class TiltControls : MonoBehaviour
                 //check if there is y input and double
                 if (fixedTilt.y > 0.0f)
                 {
-                    fixedTilt.y *= jumpSpeed;
+                    fixedTilt.y = jumpSpeed;
                 }
                 
                 //check jump velocity and clamp
