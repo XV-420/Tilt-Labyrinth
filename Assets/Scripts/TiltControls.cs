@@ -13,9 +13,8 @@ public class TiltControls : MonoBehaviour
     [SerializeField] private float speed = 200.0f;
  
     [Header("Jump Controls")]
-    [SerializeField] private float maxJumpSpeed = 5.0f;
     [SerializeField] private LayerMask m_LayerMask;
-    [SerializeField] private float jumpSpeed = 200.0f;
+    [SerializeField] private float jumpSpeed = 15.0f;
     [SerializeField] private bool jumpEnable = false;
 
    
@@ -40,18 +39,14 @@ public class TiltControls : MonoBehaviour
                 //check if there is y input and double
                 if (fixedTilt.y > 0.0f)
                 {
-                    fixedTilt.y = jumpSpeed;
+                   ballRigidBody.velocity = new Vector3(ballRigidBody.velocity.x,jumpSpeed, ballRigidBody.velocity.z);
                 }
                 
-                //check jump velocity and clamp
-                if (ballRigidBody.velocity.y > maxJumpSpeed)
-                    ballRigidBody.velocity =
-                        new Vector3(ballRigidBody.velocity.x, maxJumpSpeed, ballRigidBody.velocity.z);
             }
             else fixedTilt = Vector3.zero;
 
         }
-        else fixedTilt.y = 0.0f;
+        fixedTilt.y = 0.0f;
 
 
         
