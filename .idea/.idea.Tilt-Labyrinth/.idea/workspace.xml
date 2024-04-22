@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ExitArrows.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ExitArrows.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallCompControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallCompControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowBall.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,7 @@
       <workItem from="1713535891033" duration="2010000" />
       <workItem from="1713546082889" duration="3076000" />
       <workItem from="1713630235920" duration="786000" />
-      <workItem from="1713794606421" duration="3304000" />
+      <workItem from="1713794606421" duration="4384000" />
     </task>
     <servers />
   </component>

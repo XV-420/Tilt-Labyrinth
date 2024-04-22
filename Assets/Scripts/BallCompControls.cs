@@ -19,7 +19,6 @@ public class BallCompControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Forces After:" + ballRigidBody.velocity);
         //if off the board remove xz input or velocity
         Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity, m_LayerMask);
         if (hitColliders.Length>0)
