@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitPositions:
   - {fileID: 8765147847801118480}
+  arrowPrefab: {fileID: 2211495587302995546, guid: ed219159c19cb6d44a1deb158341d722,
+    type: 3}
   ballTransform: {fileID: 0}
 --- !u!1001 &387493915163649382
 PrefabInstance:
