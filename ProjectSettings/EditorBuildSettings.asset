@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoardTest.unity
     guid: 8715063b71b841f4c8db1ef51c2e29f7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MVI.unity
     guid: 48cf16c37b42e934391850bfbf7b63b2
   m_configObjects:

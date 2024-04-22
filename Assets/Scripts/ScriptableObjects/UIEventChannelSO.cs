@@ -1,18 +1,17 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
-
 [CreateAssetMenu(fileName = "UIEventChannel", menuName = "ScriptableObjects/UIEventChannelSO")]
 public class UIEventChannelSO : ScriptableObject
 {
     //what happens when next level is clicked
-    public UnityAction OnNextLevel;
-    public void RaiseOnNextLevel()
+    public Action<bool, int> OnNextLevel;
+    public void RaiseOnNextLevel(bool loadSpecificLevel, int levelToLoad)
     {
-        OnNextLevel.Invoke();
+        OnNextLevel.Invoke(loadSpecificLevel, levelToLoad);
     }
     
     //trigger when main menu is clicked
-    public UnityAction OnMainMenu;
+    public Action OnMainMenu;
 
     public void RaiseOnMainMenu()
     {
@@ -20,7 +19,7 @@ public class UIEventChannelSO : ScriptableObject
     }
     
     //trigger for when the calibrate is called
-    public UnityAction OnCalibrate;
+    public Action OnCalibrate;
 
     public void RaiseOnCalibrate()
     {
@@ -28,7 +27,7 @@ public class UIEventChannelSO : ScriptableObject
     }
     
     //Trigger for when reset is called
-    public UnityAction OnReset;
+    public Action OnReset;
 
     public void RaiseOnReset()
     {
@@ -36,7 +35,7 @@ public class UIEventChannelSO : ScriptableObject
     }
     
     //Trigger for when reset is called
-    public UnityAction OnQuit;
+    public Action OnQuit;
 
     public void RaiseOnQuit()
     {
