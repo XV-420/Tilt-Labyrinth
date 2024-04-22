@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe948fb60d689846b5ac6da3fde55a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiEventChannelSo: {fileID: 0}
-  GameEventChannelSo: {fileID: 0}
+  uiEventChannelSo: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
+  GameEventChannelSo: {fileID: 11400000, guid: 1bee712cc9f88e64d8ab72bd69686203, type: 2}
   mainMenuButton: {fileID: 4445846142672351723}
   nextLevelButton: {fileID: 4236210550492823980}
 --- !u!1 &3334339314632348203

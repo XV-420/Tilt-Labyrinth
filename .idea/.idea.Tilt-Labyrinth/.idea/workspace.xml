@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers/SceneChangeManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers/SceneChangeManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/GameObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/GameObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/EndLevelUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/EndLevelUI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallCompControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallCompControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowBall.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +108,8 @@
       <workItem from="1713382834353" duration="2617000" />
       <workItem from="1713535891033" duration="2010000" />
       <workItem from="1713546082889" duration="3076000" />
+      <workItem from="1713630235920" duration="786000" />
+      <workItem from="1713794606421" duration="817000" />
     </task>
     <servers />
   </component>

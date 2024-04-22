@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballTransform: {fileID: 0}
+  heightAboveBall: 10
 --- !u!1 &6022522556433435424
 GameObject:
   m_ObjectHideFlags: 0
