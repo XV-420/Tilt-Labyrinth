@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuUIManager : MonoBehaviour
@@ -17,7 +15,7 @@ public class MainMenuUIManager : MonoBehaviour
     {
         startGameButton.onClick.AddListener(delegate
         {
-            uiEventChannelSo.RaiseOnNextLevel();
+            uiEventChannelSo.RaiseOnNextLevel(false, 0);
         });
         
         quitGameButton.onClick.AddListener(delegate

@@ -11,16 +11,13 @@ public class TiltControls : MonoBehaviour
 
     [Header("Controls")]
     [SerializeField] private float speed = 200.0f;
-    [SerializeField] private float jumpSpeed = 200.0f;
+ 
+    [Header("Jump Controls")]
+    [SerializeField] private LayerMask m_LayerMask;
+    [SerializeField] private float jumpSpeed = 15.0f;
     [SerializeField] private bool jumpEnable = false;
 
-    [Header("True cancels out all XZ, False cancels out XZ Input, leaves current velocity")]
-    [SerializeField] private bool inputCancelOrVelocityCancel = true;
-    [SerializeField] private float heightOfInputCancelation = 1.5f;
-    [SerializeField] private float maxJumpSpeed = 5.0f;
-
-    [SerializeField] private Transform lowBoundsForJump;
-    
+   
     //gets the accelerometer data and uses the calibration data to modify it
     //then applys that using applyforce to the rigidybody
     void Update()
@@ -35,27 +32,21 @@ public class TiltControls : MonoBehaviour
 
         if (jumpEnable)
         {
-            //check jump velocity and clamp
-            if (ballRigidBody.velocity.y > maxJumpSpeed)
-                ballRigidBody.velocity = new Vector3(ballRigidBody.velocity.x,maxJumpSpeed, ballRigidBody.velocity.z);
-            
-            //check if there is y input and double
-            if (fixedTilt.y > 0.0f)
-            {
-                fixedTilt.y *= jumpSpeed;
-            }
+            Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity, m_LayerMask);
 
-            //if off the board remove xz input or velocity
-            if (transform.position.y >lowBoundsForJump.position.y + heightOfInputCancelation)
+            if (hitColliders.Length > 0)
             {
-                //checks on height
-                if (!inputCancelOrVelocityCancel)
-                    fixedTilt = new Vector3(0, fixedTilt.y, 0);
-                else
-                    ballRigidBody.velocity = new Vector3(0, ballRigidBody.velocity.y, 0);
+                //check if there is y input and double
+                if (fixedTilt.y > 0.0f)
+                {
+                   ballRigidBody.velocity = new Vector3(ballRigidBody.velocity.x,jumpSpeed, ballRigidBody.velocity.z);
+                }
+                
             }
+            else fixedTilt = Vector3.zero;
+
         }
-        else fixedTilt.y = 0.0f;
+        fixedTilt.y = 0.0f;
 
 
         
@@ -85,7 +76,6 @@ public class TiltControls : MonoBehaviour
     {
         CalibrateAccelerometer();
         ballRigidBody = GetComponent<Rigidbody>();
-        lowBoundsForJump = GetComponent<Ball>().GetLowBounds();
     }
 
     public void ZeroVelocity()

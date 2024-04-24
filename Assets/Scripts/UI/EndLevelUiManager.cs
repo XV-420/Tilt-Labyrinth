@@ -1,35 +1,36 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class EndLevelUiManager : MonoBehaviour
 {
     [Header("Event Channels")]
     [SerializeField] private UIEventChannelSO uiEventChannelSo;
     //event channel
-    [SerializeField] private GameEventChannelSO GameEventChannelSo;
+    [SerializeField] private GameEventChannelSO gameEventChannelSo;
 
     
     //buttons
     //main menu button
+    [Header("Buttons")]
     [SerializeField] private UnityEngine.UI.Button mainMenuButton;
     
     //next level button
     [SerializeField] private UnityEngine.UI.Button nextLevelButton;
 
     //canvas for the levelUI
-    private UnityEngine.Canvas levelEndUI;
+    private Canvas levelEndUI;
+    
+    //level loading data
+    private int levelToLoad;
+    private bool loadSpecificLevel;
     
     //set up event listeners
     private void OnEnable()
     {
-        GameEventChannelSo.OnLevelCompleted += EnableUI;
+        gameEventChannelSo.OnLevelCompleted += EnableUI;
     }
     private void OnDisable()
     {
-        GameEventChannelSo.OnLevelCompleted -= EnableUI;
+        gameEventChannelSo.OnLevelCompleted -= EnableUI;
     }
     
     private void Start()
@@ -47,15 +48,12 @@ public class EndLevelUiManager : MonoBehaviour
         //next level click
         nextLevelButton.onClick.AddListener(delegate
         {
-            uiEventChannelSo.RaiseOnNextLevel();
+            uiEventChannelSo.RaiseOnNextLevel(loadSpecificLevel, levelToLoad);
             Time.timeScale = 1;
         });
         
         //disable UI
         DisableUI();
-        
-        
-        
     }
     
     //disable UI Method
@@ -65,8 +63,10 @@ public class EndLevelUiManager : MonoBehaviour
     }
     
     //Enable UI Method
-    void EnableUI()
+    void EnableUI(bool loadSpecificLevel, int levelToLoad)
     {
+        this.loadSpecificLevel = loadSpecificLevel;
+        this.levelToLoad = levelToLoad;
         levelEndUI.enabled = true;
         Time.timeScale = 0;
     }

@@ -1,22 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ExitArrows : MonoBehaviour
 {
+    //list of exits
     [SerializeField] private List<Transform> exitPositions = new List<Transform>();
-    // Start is called before the first frame update
+   
+    //arrow
+    [SerializeField] private GameObject arrowPrefab;
+
+    private List<GameObject> exitArrows = new List<GameObject>();
 
     [SerializeField] private Transform ballTransform;
-    // Update is called once per frame
+
+    private void Start()
+    {
+        foreach (Transform exit in exitPositions)
+            exitArrows.Add(Instantiate(arrowPrefab, ballTransform));
+    }
+
     void Update()
     {
         if (ballTransform)
         {
-            foreach (Transform t in exitPositions)
+            for(int i = 0; i < exitPositions.Count; i++)
             {
                 //debugging rays
-                Debug.DrawRay(ballTransform.position, t.position - ballTransform.position, Color.yellow);
+                Debug.DrawRay(ballTransform.position, exitPositions[i].position - ballTransform.position, Color.yellow);
+                Vector3 target = exitPositions[i].position;
+                exitArrows[i].transform.LookAt(target);
+
             }
         }
     }

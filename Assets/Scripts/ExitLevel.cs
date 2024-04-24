@@ -12,13 +12,13 @@ public class ExitLevel : MonoBehaviour
     //subscribe(listen) to on level completed and main menu events
     private void OnEnable()
     {
-        uiEventChannel.OnNextLevel += LoadNextLevel;
+        uiEventChannel.OnNextLevel += LoadLevel;
         uiEventChannel.OnMainMenu += LoadMainMenu;
         uiEventChannel.OnQuit += QuitGame;
     }
     private void OnDisable()
     {
-        uiEventChannel.OnNextLevel -= LoadNextLevel;
+        uiEventChannel.OnNextLevel -= LoadLevel;
         uiEventChannel.OnMainMenu -= LoadMainMenu;
         uiEventChannel.OnQuit -= QuitGame;
     }
@@ -30,6 +30,14 @@ public class ExitLevel : MonoBehaviour
         sceneCount = SceneManager.sceneCountInBuildSettings;
     }
 
+    //either loads the next level or a specific one based on the bool
+    private void LoadLevel(bool loadSpecificLevel, int levelToLoad)
+    {
+        if (loadSpecificLevel)
+            LoadSpecificLevel(levelToLoad);
+        else
+            LoadNextLevel();
+    }
     
     
     //loads the next level, defaults to main menu if fails
@@ -50,8 +58,8 @@ public class ExitLevel : MonoBehaviour
     private void LoadSpecificLevel(int sceneToLoad)
     {
         //if scene is valid load
-        if (sceneToLoad <= sceneCount)
-            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
+        if (sceneToLoad < sceneCount)
+            SceneManager.LoadScene(sceneToLoad);
         else //load the main menu, 0
             SceneManager.LoadScene(0);
     }

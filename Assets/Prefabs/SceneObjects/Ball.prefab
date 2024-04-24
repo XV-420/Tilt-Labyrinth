@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ace67d11a286145aacc1451373c0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiEventChannel: {fileID: 0}
+  uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
   spawnPos: {fileID: 0}
   lowBounds: {fileID: 0}
 --- !u!114 &6948391716579231024
@@ -164,12 +164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
-  heightOfInputCancelation: 2.5
-  maxJumpSpeed: 5
+  maxJumpSpeed: 15
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 64
-  lowBoundsForJump: {fileID: 0}
 --- !u!114 &6687972147417815877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,9 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
   speed: 400
-  jumpSpeed: 30
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  jumpSpeed: 15
   jumpEnable: 1
-  inputCancelOrVelocityCancel: 0
-  heightOfInputCancelation: 3
-  maxJumpSpeed: 5
-  lowBoundsForJump: {fileID: 0}
