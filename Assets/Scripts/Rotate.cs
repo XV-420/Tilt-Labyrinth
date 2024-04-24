@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-    private float timer=0;
+    private float timer=5;
     [SerializeField] private float x;
     [SerializeField] private float y;
     [SerializeField] private float z;
@@ -19,7 +19,7 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > 10) {
+        if(timer > 5) {
         x=Random.Range(-1.0f, 1.0f);
         y = Random.Range(-1.0f, 1.0f);
         z = Random.Range(-1.0f, 1.0f);
@@ -29,9 +29,19 @@ public class Rotate : MonoBehaviour
         {
             if(transform.eulerAngles.x + x < 340)
             {
-                if (x < 0)
+                if (transform.eulerAngles.x > 180)
                 {
-                    x = 0;
+                    if (x < 0)
+                    {
+                        x = 0;
+                    }
+                }
+                else
+                {
+                    if (x > 0)
+                    {
+                        x = 0;
+                    }
                 }
             }
             else
@@ -45,11 +55,21 @@ public class Rotate : MonoBehaviour
         if (transform.eulerAngles.z + z < 340 && transform.eulerAngles.z + z > 30)
         {
 
-            if (transform.eulerAngles.z + z < 180)
+            if (transform.eulerAngles.z + z < 340)
             {
-                if (z>  0)
+                if (transform.eulerAngles.z + z > 180)
                 {
-                    z = 0;
+                    if (z < 0)
+                    {
+                        z = 0;
+                    }
+                }
+                else
+                {
+                    if (z > 0)
+                    {
+                        z = 0;
+                    }
                 }
             }
             else
