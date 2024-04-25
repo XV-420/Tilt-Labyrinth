@@ -436,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 6948391716579231024, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}
       propertyPath: m_LayerMask.m_Bits
-      value: 0
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 7865005378517448157, guid: 5448a1a19b725794d96df965b3b6c38c,
         type: 3}
@@ -1479,6 +1479,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1570710534993853879, guid: 4175b91de08df7b48bf50f6cb797421e,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1183974881}
+    - targetCorrespondingSourceObject: {fileID: 1570710534993853879, guid: 4175b91de08df7b48bf50f6cb797421e,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1210708681}
     - targetCorrespondingSourceObject: {fileID: 1570710534993853879, guid: 4175b91de08df7b48bf50f6cb797421e,
         type: 3}
@@ -1496,10 +1500,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 200467820}
-    - targetCorrespondingSourceObject: {fileID: 1570710534993853879, guid: 4175b91de08df7b48bf50f6cb797421e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1183974881}
     - targetCorrespondingSourceObject: {fileID: 1570710534993853879, guid: 4175b91de08df7b48bf50f6cb797421e,
         type: 3}
       insertIndex: -1

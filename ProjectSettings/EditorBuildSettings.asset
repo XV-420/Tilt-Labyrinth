@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HarderBounceLevel.unity
     guid: 15ef93be264e51f4e9824960002c6b47
+  - enabled: 1
+    path: Assets/Scenes/Jolie Leve.unity
+    guid: 3225d935fd96bc74792de8cbf4540669
   - enabled: 0
     path: Assets/Scenes/MVI.unity
     guid: 48cf16c37b42e934391850bfbf7b63b2
