@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -131,6 +131,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 647550718487009518}
     m_Modifications:
+    - target: {fileID: 2348093219323728758, guid: e3664348ef6d62345b20dd30f7c186aa,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3539243542603488062, guid: e3664348ef6d62345b20dd30f7c186aa,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153984203892464030, guid: e3664348ef6d62345b20dd30f7c186aa,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5256451418066629394, guid: e3664348ef6d62345b20dd30f7c186aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -181,10 +196,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5750672093422054901, guid: e3664348ef6d62345b20dd30f7c186aa,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6327603487637082054, guid: e3664348ef6d62345b20dd30f7c186aa,
         type: 3}
       propertyPath: m_Name
       value: Level1Board
+      objectReference: {fileID: 0}
+    - target: {fileID: 8229339635497023021, guid: e3664348ef6d62345b20dd30f7c186aa,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -604,7 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
   spawnPos: {fileID: 547107244053115859}
-  lowBounds: {fileID: 0}
+  lowBounds: {fileID: 460012841}
 --- !u!114 &1549329562756993253
 MonoBehaviour:
   m_ObjectHideFlags: 0
