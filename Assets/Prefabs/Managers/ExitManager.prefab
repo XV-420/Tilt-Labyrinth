@@ -65,8 +65,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8990495674646887030, guid: 5b3729351d9a7b44a8909ee15351be6e,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990495674646887030, guid: 5b3729351d9a7b44a8909ee15351be6e,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1188.4
+      value: -1186.86
       objectReference: {fileID: 0}
     - target: {fileID: 8990495674646887030, guid: 5b3729351d9a7b44a8909ee15351be6e,
         type: 3}
@@ -141,6 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEventChannel: {fileID: 11400000, guid: 1bee712cc9f88e64d8ab72bd69686203, type: 2}
+  specific: 0
+  levelToLoad: 0
 --- !u!4 &8765147847801118480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8990495674646887030, guid: 5b3729351d9a7b44a8909ee15351be6e,

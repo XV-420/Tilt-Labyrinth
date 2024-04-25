@@ -477,6 +477,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndLevelUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4268517615228394539, guid: ff5d0a8b7caee3b429a77671939faa29,
+        type: 3}
+      propertyPath: gameEventChannelSo
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bee712cc9f88e64d8ab72bd69686203,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
