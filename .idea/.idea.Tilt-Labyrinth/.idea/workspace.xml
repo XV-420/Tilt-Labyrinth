@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/WallHorizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/WallHorizontal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <workItem from="1713794606421" duration="6485000" />
       <workItem from="1713816283517" duration="1705000" />
       <workItem from="1713970583458" duration="188000" />
-      <workItem from="1714077971394" duration="762000" />
+      <workItem from="1714077971394" duration="764000" />
     </task>
     <servers />
   </component>
