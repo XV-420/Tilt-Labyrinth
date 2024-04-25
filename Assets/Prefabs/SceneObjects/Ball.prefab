@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 3033624688467108005}
   - component: {fileID: 6948391716579231024}
   - component: {fileID: 6687972147417815877}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f070b9b51e38424e9597fbb6f473e87, type: 2}
+  - {fileID: 2100000, guid: cc435bb8e107b2b44959cf41021e28f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ace67d11a286145aacc1451373c0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
   spawnPos: {fileID: 0}
   lowBounds: {fileID: 0}
 --- !u!114 &6948391716579231024
@@ -163,6 +164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  maxJumpSpeed: 15
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &6687972147417815877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d798450c373a9542b60dc9074368bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
+  speed: 400
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 64
   jumpSpeed: 15
   jumpEnable: 1

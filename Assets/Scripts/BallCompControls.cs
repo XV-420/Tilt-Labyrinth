@@ -6,6 +6,10 @@ public class BallCompControls : MonoBehaviour
 {
     private Rigidbody ballRigidBody;
     [SerializeField] private float speed = 200.0f;
+    
+    [SerializeField] private float maxJumpSpeed = 5.0f;
+    [SerializeField] private LayerMask m_LayerMask;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,28 +19,43 @@ public class BallCompControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        //if off the board remove xz input or velocity
+        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity, m_LayerMask);
+        if (hitColliders.Length>0)
         {
-            Vector3 z = new Vector3(0, 0, 1);
-            ballRigidBody.AddForce(z * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-        {
-            Vector3 z = new Vector3(0, 0, -1);
-            ballRigidBody.AddForce(z * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
-            Vector3 x = new Vector3(-1, 0, 0);
-            ballRigidBody.AddForce(x * speed * Time.deltaTime);
-            
+                Vector3 forces = Vector3.zero;
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+                {
+                    forces = new Vector3(forces.x, forces.y, forces.z + 1);
+                }
+                if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+                {
+                    forces = new Vector3(forces.x, forces.y, forces.z -1);
+                }
+                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+                {
+                    forces = new Vector3(forces.x-1, forces.y, forces.z);
+                }
+                if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+                {
+                    forces = new Vector3(forces.x+1, forces.y, forces.z);
+                }
 
+                //jumping
+                //check jump velocity and clamp
+                
+                if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.X))
+                {
+                    float x = ballRigidBody.velocity.x;
+                    float z = ballRigidBody.velocity.z;
+                    //forces = new Vector3(forces.x, forces.y + 1, forces.z);
+                    //forces = new Vector3(forces.x, 0, forces.z);
+                    //forces.y *= maxJumpSpeed;
+                    ballRigidBody.velocity = new Vector3(x, maxJumpSpeed, z);
+                }
+                
+                ballRigidBody.AddForce(forces * speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            Vector3 x = new Vector3(1, 0, 0);
-            ballRigidBody.AddForce(x * speed * Time.deltaTime);
-           
-
-        }
+        
     }
 }
