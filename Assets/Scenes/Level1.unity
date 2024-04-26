@@ -2862,7 +2862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
-  speed: 400
+  speed: 700
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 64

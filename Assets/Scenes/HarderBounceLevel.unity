@@ -2067,7 +2067,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f070b9b51e38424e9597fbb6f473e87, type: 2}
+  - {fileID: 2100000, guid: cc435bb8e107b2b44959cf41021e28f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2809,7 +2809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
-  speed: 400
+  speed: 700
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 64
