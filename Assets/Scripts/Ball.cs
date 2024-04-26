@@ -50,12 +50,10 @@ public class Ball : MonoBehaviour
     private void OnEnable()
     {
         uiEventChannel.OnReset += ResetBall; 
-        uiEventChannel.OnCalibrate += ResetBall;
     }
     private void OnDisable()
     {
         uiEventChannel.OnReset -= ResetBall;
-        uiEventChannel.OnCalibrate -= ResetBall;
     }
 
     
