@@ -5233,6 +5233,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1517104383495411759, guid: e09d40f085e3e1c4f994a5eccd226ad8,
         type: 3}
+      propertyPath: ballSpawn
+      value: 
+      objectReference: {fileID: 1245614083}
+    - target: {fileID: 1517104383495411759, guid: e09d40f085e3e1c4f994a5eccd226ad8,
+        type: 3}
       propertyPath: ballTransform
       value: 
       objectReference: {fileID: 1402013588}

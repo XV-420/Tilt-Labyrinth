@@ -22,6 +22,9 @@ public class InGameUIManager : MonoBehaviour
     
     //main menu button
     [SerializeField] private UnityEngine.UI.Button resumeButton;
+    
+    //camera
+    [SerializeField] private UnityEngine.UI.Button cameraSwapButton;
 
     [Header("Unity UI Elements")]
     //panel for options background
@@ -29,6 +32,11 @@ public class InGameUIManager : MonoBehaviour
     
     void Start()
     {
+        //camera sawp button
+        cameraSwapButton.onClick.AddListener(delegate {   
+            uiEventChannelSo.RaiseOnCamaraSwap();
+        });
+        
         //setup onclick of the calibrate unpauses
         calibrateButton.onClick.AddListener(delegate {   
             uiEventChannelSo.RaiseOnCalibrate();

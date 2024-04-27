@@ -728,6 +728,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1517104383495411759, guid: e09d40f085e3e1c4f994a5eccd226ad8,
         type: 3}
+      propertyPath: ballSpawn
+      value: 
+      objectReference: {fileID: 547107243685083488}
+    - target: {fileID: 1517104383495411759, guid: e09d40f085e3e1c4f994a5eccd226ad8,
+        type: 3}
       propertyPath: ballTransform
       value: 
       objectReference: {fileID: 4379368572672973242}
@@ -974,6 +979,22 @@ PrefabInstance:
       propertyPath: ballTransform
       value: 
       objectReference: {fileID: 4379368572672973242}
+    - target: {fileID: 8437340944525408160, guid: e63b660b71e010a4b936e273b7073ac9,
+        type: 3}
+      propertyPath: heightAboveBall
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437340944525408160, guid: e63b660b71e010a4b936e273b7073ac9,
+        type: 3}
+      propertyPath: uiEventChannelSo
+      value: 
+      objectReference: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e,
+        type: 2}
+    - target: {fileID: 8437340944525408160, guid: e63b660b71e010a4b936e273b7073ac9,
+        type: 3}
+      propertyPath: swapHeightAboveBall
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

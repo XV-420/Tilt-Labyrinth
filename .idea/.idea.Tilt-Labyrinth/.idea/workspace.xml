@@ -6,6 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Scene.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Arrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GameUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GameUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BoardTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BoardTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HarderBounceLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HarderBounceLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jolie Leve.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jolie Leve.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LowerBounceLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LowerBounceLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ExitArrows.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ExitArrows.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FollowBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/UIEventChannelSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/UIEventChannelSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameUIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +120,7 @@
       <workItem from="1713816283517" duration="1705000" />
       <workItem from="1713970583458" duration="188000" />
       <workItem from="1714077971394" duration="764000" />
+      <workItem from="1714169340459" duration="3262000" />
     </task>
     <servers />
   </component>

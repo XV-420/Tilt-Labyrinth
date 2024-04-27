@@ -41,4 +41,12 @@ public class UIEventChannelSO : ScriptableObject
     {
         OnQuit.Invoke();
     }
+    
+    //Trigger for when camera is swapped
+    public Action OnCameraSwap;
+
+    public void RaiseOnCamaraSwap()
+    {
+        OnCameraSwap.Invoke();
+    }
 }

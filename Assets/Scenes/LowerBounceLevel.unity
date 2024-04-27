@@ -2218,6 +2218,7 @@ MonoBehaviour:
   exitPositions:
   - {fileID: 8240949861090667526}
   - {fileID: 1545217108}
+  ballSpawn: {fileID: 6249056966573855051}
   arrowPrefab: {fileID: 2211495587302995546, guid: ed219159c19cb6d44a1deb158341d722,
     type: 3}
   ballTransform: {fileID: 7919597072567398801}
