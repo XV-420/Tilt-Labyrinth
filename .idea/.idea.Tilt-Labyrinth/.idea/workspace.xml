@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BoardTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BoardTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

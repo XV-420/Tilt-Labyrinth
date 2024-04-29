@@ -8,19 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 452ed99540efb564aa23fe7c65b29064
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 0c8f6f350d3267540a0b6fe3f78d93e2
   - enabled: 1
     path: Assets/Scenes/BoardTest.unity
     guid: 8715063b71b841f4c8db1ef51c2e29f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LowerBounceLevel.unity
     guid: 0850f5e2af416c145a9796fda2af18ae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HarderBounceLevel.unity
     guid: 15ef93be264e51f4e9824960002c6b47
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jolie Leve.unity
     guid: 3225d935fd96bc74792de8cbf4540669
   - enabled: 0

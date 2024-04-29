@@ -3066,9 +3066,11 @@ MonoBehaviour:
   speed: 200
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   jumpSpeed: 15
   jumpEnable: 1
+  minJumpAngle: 90
+  maxJumpAngle: 315
 --- !u!4 &7282317996921018568
 Transform:
   m_ObjectHideFlags: 0

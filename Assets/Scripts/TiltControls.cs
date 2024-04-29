@@ -114,7 +114,7 @@ public class TiltControls : MonoBehaviour
         Quaternion worldRotation = GyroManager.Instance.GetGyroRotation();
 
         // make the rotation relative to the local rotation rather than the world
-        Quaternion localRotation = GyroManager.Instance.GetGyroReferenceRotation() * worldRotation;
+        Quaternion localRotation = GyroManager.Instance.GetGyroReferenceRotation() * worldRotation; //referenceRotation
 
         Vector3 euler = localRotation.eulerAngles;
         
