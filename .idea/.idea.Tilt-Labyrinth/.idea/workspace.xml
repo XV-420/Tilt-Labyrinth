@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="124644ec-48ba-45ab-9abd-3226c9b3bf4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tilt-Labyrinth/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneObjects/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.scenetemplate" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.scenetemplate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/bounceLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GyroManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GyroManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TiltControls.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +112,7 @@
       <workItem from="1714169340459" duration="3262000" />
       <workItem from="1714177808605" duration="12936000" />
       <workItem from="1714192334039" duration="333000" />
+      <workItem from="1714398006427" duration="318000" />
     </task>
     <servers />
   </component>

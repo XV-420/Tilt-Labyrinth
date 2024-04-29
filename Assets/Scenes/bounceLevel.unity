@@ -192,6 +192,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 8.16222, z: 10}
   m_Center: {x: 0, y: 1.58111, z: 0}
+--- !u!114 &809899677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3620154432476307161, guid: b7024dfd4bc14e9468d8afd86241bd99,
+    type: 3}
+  m_PrefabInstance: {fileID: 946427581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &946427581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204,7 +216,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cameraSwapButton
       value: 
-      objectReference: {fileID: 1444411665}
+      objectReference: {fileID: 809899677}
     - target: {fileID: 7230890833833350166, guid: b7024dfd4bc14e9468d8afd86241bd99,
         type: 3}
       propertyPath: m_Pivot.x
@@ -315,18 +327,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7024dfd4bc14e9468d8afd86241bd99, type: 3}
---- !u!114 &1444411665 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3620154432476307161, guid: b7024dfd4bc14e9468d8afd86241bd99,
-    type: 3}
-  m_PrefabInstance: {fileID: 946427581}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &21521575737442536
 Transform:
   m_ObjectHideFlags: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
   spawnPos: {fileID: 547107243016470476}
-  lowBounds: {fileID: 2067301714434480560}
+  lowBounds: {fileID: 4379368573051658006}
 --- !u!114 &1549329561781165306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,10 +3063,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiEventChannel: {fileID: 11400000, guid: ef78e57a200eafe409a1df280fdba11e, type: 2}
-  speed: 450
+  speed: 200
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   jumpSpeed: 15
   jumpEnable: 1
 --- !u!4 &7282317996921018568
