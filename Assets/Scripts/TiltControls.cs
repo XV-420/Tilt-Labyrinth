@@ -16,6 +16,8 @@ public class TiltControls : MonoBehaviour
 
     [SerializeField] private float jumpSpeed = 15.0f;
     [SerializeField] private bool jumpEnable = false;
+    [SerializeField] private float minJumpAngle = 90.0f;
+    [SerializeField] private float maxJumpAngle = 315.0f;
 
 
     //gets the accelerometer data and uses the calibration data to modify it
@@ -126,9 +128,6 @@ public class TiltControls : MonoBehaviour
         localRotation = new Quaternion(localRotation.x, localRotation.z, localRotation.y, -localRotation.w);
 
         Vector3 localRotationEuler = localRotation.eulerAngles;
-
-        //make y the same always
-        localRotationEuler.y = -localRotationEuler.normalized.y;
         
         //clamp and rotate
         if (ClampAngle(localRotationEuler.x) || ClampAngle(localRotationEuler.z))
@@ -143,10 +142,10 @@ public class TiltControls : MonoBehaviour
 
     
     private bool ClampAngle(float angle)
-    {
-        if (angle >45 && angle < 315)
+    {Debug.Log(angle);
+        if (angle >minJumpAngle && angle < maxJumpAngle)
         {       // if angle in the critic region...
-            if (angle < 315 && angle> 180)
+            if (angle < maxJumpAngle && angle> minJumpAngle)
             {
                 return true;
             }
