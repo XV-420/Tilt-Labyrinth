@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6271959743485210582}
   - component: {fileID: 8437340944525408160}
+  - component: {fileID: -2017367290881899303}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -47,6 +48,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballTransform: {fileID: 0}
   heightAboveBall: 10
+  swapHeightAboveBall: 0
+  uiEventChannelSo: {fileID: 0}
+--- !u!114 &-2017367290881899303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535698849912896323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f529abbd7a5bb4dba25af6df6572e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6022522556433435424
 GameObject:
   m_ObjectHideFlags: 0

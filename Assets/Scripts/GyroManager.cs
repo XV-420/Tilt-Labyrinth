@@ -28,15 +28,15 @@ public class GyroManager : MonoBehaviour
     #endregion
 
     private Gyroscope gyro;
-    private Vector3 rotation;
+    private Quaternion rotation;
     private bool gyroEnabled;
-    private Vector3 referenceRotation;
+    private Quaternion referenceRotation;
 
     // Update is called once per frame
     void Update()
     {
         //sets rotation based on gyro
-        if (gyroEnabled) rotation = gyro.userAcceleration;
+        if (gyroEnabled) rotation = gyro.attitude;
     }
 
     //starts the gyro if supported by the device, returns if already active
@@ -48,24 +48,24 @@ public class GyroManager : MonoBehaviour
             gyro = Input.gyro;
             gyro.enabled = true;
             gyroEnabled = true;
-            referenceRotation = -gyro.userAcceleration;
+            referenceRotation = Quaternion.Inverse(rotation);
         }
         else gyroEnabled = false;
     }
 
     //returns the rotation
-    public Vector3 GetGyroRotation()
+    public Quaternion GetGyroRotation()
     {
-        return rotation;
+        return (rotation);
     }
-    
-    public Vector3 GetGyroReferenceRotation()
+
+    public Quaternion GetGyroReferenceRotation()
     {
         return referenceRotation;
     }
     
     public void SetGyroReferenceRotation()
     {
-       referenceRotation = -gyro.userAcceleration;
+       referenceRotation = Quaternion.Inverse(rotation);
     }
 }
